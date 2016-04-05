@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<html lang="sv">
+	<title>❤ LOVE SHOT ❤</title>
+		<script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/Sacramento_400.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			Cufon.replace('h1'); // Works without a selector engine
+		</script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
+	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/jquery.form.js"></script>
+
+	<script>
+	$(function(){
+	$('#contact').validate({
+	submitHandler: function(form) {
+		$(form).ajaxSubmit({
+		url: 'process.php',
+		success: function() {
+		$('#contact').hide();
+		$('#contact-form').append("<p class='thanks'>Tack! Ditt meddelande har skickats.</p>")
+		}
+		});
+		}
+	});         
+	});
+	</script>		
+</head>
+
+<body>
+<hr class="style-top">
+<div class="container_16">
+	<div class="grid_16">
+		<div class="grid_2 alpha">
+			<div id="logo">
+				<a href="index.html"><h1>LOVE SHOT</h1></a>  
+			</div>													
+		</div>
+
+		<div class="grid_8 prefix_5 omega">
+			<h1 class="tagline">Kontakta Mig</h1>  
+		</div>
+	</div>
+	
+	<div class="grid_3 alpha">
+		<div id="nav">
+			<ul>
+				<li><a href="foto-galleri.html">Foto Galleri</a></li>         
+				<li><a href="om-love.html">Om Love Shot</a></li>								
+				<li><a href="contact.html">Kontakta mig</a></li>
+				<li><a href="bokatid.html">Anlita mig</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class="grid_13 omega">
+		<div id="contact-form" class="grid_7  alpha">
+			<form id="contact" method="post" action="">
+				<fieldset>	
+
+				<label for="name">Namn</label>
+				<input type="text" name="name" placeholder="Fullst&auml;ndigt Namn" title="Ange ditt namn" class="required">
+
+				<label for="email">E-mail</label>
+				<input type="email" name="email" placeholder="dittnamn@exempel.com" title="Ange din e-mail adress" class="required email">
+
+				<label for="phone">Telefon (Frivilligt)</label>
+				<input type="tel" name="phone" placeholder="ex: (+46) 73-553 24 62">
+
+				<label for="message">Fr&aring;ga/Kommentar</label>
+				<textarea name="message" title="Ange fr&aring;ga/kommentar" class="required message"></textarea>
+
+				<input type="submit" name="submit" class="button" id="submit" value="Skicka Meddelande" />
+
+				</fieldset>
+		</div>
+				<script src="js/modernizr-min.js"></script>
+				<script>
+				if (!Modernizr.input.placeholder){
+				      $('input[placeholder], textarea[placeholder]').placeholder();
+				}
+				</script>
+		<div class="grid_5 omega">
+			<h6>♡ Love Shot Stockholm, Sweden</h6>
+			<p>☎ +123 456 7890</p>
+			<p>✉ info@loveshot.se</p>
+			<p><strong>Är du intresserad av att anlita mig?</strong></p>
+           <p>Kontakta mig i kontaktformuläret för att boka tid. Du är välkommen att kontakta mig via mail/onlinekalendern, men även telefon eller sms. Systemet är självinstruerande och det behövs ingen inloggning.
+           <p> Nya kunder ombeds först kontakta mig via mail eller telefon innan du bokar i onlinekalendern. Detta på grund av att jag f.n. har väntelista (vår 2013). Hittar du ingen passande tid i kalendern, kan du prova att kontakta mig, så kan vi kanske få till en annan tid.</p>
+<p>Du får först ett bekräftelsemail när du bokat offert!</p>
+			<br>
+			<br>
+		</div>
+	</div>
+</div>
+<br>
+<hr class="style-bottom"> 
+</body>
+</html>

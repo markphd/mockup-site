@@ -1,0 +1,67 @@
+
+
+<head>
+	<html lang="sv">
+
+	<title>Kontakta oss</title>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/jquery.placeholder.js"></script>
+	<script src="js/jquery.form.js"></script>
+	
+	<link href="kontakt.css" rel="stylesheet">
+
+	<script>
+	$(function(){
+	$('#contact').validate({
+	submitHandler: function(form) {
+		$(form).ajaxSubmit({
+		url: 'process.php',
+		success: function() {
+		$('#contact').hide();
+		$('#contact-form').append("<p class='thanks'>Tack! Ditt meddelande har skickats.</p>")
+		}
+		});
+		}
+	});         
+	});
+	</script>	
+	
+</head>
+
+<body>
+			
+		
+		<div id="contact-form">	
+
+			<form id="contact" method="post" action="">
+				<fieldset>	
+
+				<label for="name">Namn</label>
+				<input type="text" name="name" placeholder="Fullst&auml;ndigt Namn" title="Ange ditt namn" class="required">
+
+				<label for="email">E-mail</label>
+				<input type="email" name="email" placeholder="dittnamn@exempel.com" title="Ange din e-mail adress" class="required email">
+
+				<label for="phone">Telefon (Frivilligt)</label>
+				<input type="tel" name="phone" placeholder="ex: (+46) 73-553 24 62">
+
+				<label for="message">Fr&aring;ga/Kommentar</label>
+				<textarea name="message" title="Ange fr&aring;ga/kommentar" class="required message"></textarea>
+
+				<input type="submit" name="submit" class="button" id="submit" value="Skicka Meddelande" />
+
+				</fieldset>
+			
+		</div>
+		
+
+<script src="js/modernizr-min.js"></script>
+<script>
+if (!Modernizr.input.placeholder){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+}
+</script>
+	
+</body>
