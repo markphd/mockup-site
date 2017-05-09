@@ -1,0 +1,80 @@
+{
+  "name": "markphd/mockup-site",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Compositor Test",
+  "branch": "",
+  "style": {
+    "name": "Williamsburg",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Montserrat, sans-serif",
+    "heading": {
+      "fontWeight": 600,
+      "letterSpacing": "0.1em"
+    },
+    "colors": {
+      "text": "#346",
+      "background": "#fff",
+      "primary": "#0099e0",
+      "secondary": "#ab61ff",
+      "highlight": "#f7b",
+      "muted": "#fffab3",
+      "border": "#ccd"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/markphd/mockup-site",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "mockup-site",
+      "subhead": "Love Shot - Photography site",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "mockup-site: Love Shot - Photography site",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "markphd",
+          "repo": "mockup-site"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<p>#Love Shot - Photography Site\nStatic site built with HTML, CSS and few lines of handcoded Javascript.</p>\n<p>Homepage\n<img src=\"./love-shot.png\"></p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/markphd/mockup-site",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/markphd",
+          "text": "markphd"
+        }
+      ]
+    }
+  ]
+}
